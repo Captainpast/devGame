@@ -26,8 +26,6 @@ html, body {
 }
 
 .obstacles {
-  height: 70px;
-  width: 40px;
   background: red;
   position: absolute;
 }

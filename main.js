@@ -4,7 +4,7 @@ var game = {}
 
 game.start = function() {
   player.create()
-  obstacle.create()
+  obstacle.create(70, 40)
   game.loop()
 }
 
@@ -23,9 +23,12 @@ player.create = function() {
 var obstacle = {}
 
 obstacle.s = []
-obstacle.create = function() {
+obstacle.create = function(height, width) {
   let obj = document.createElement("div")
   obj.classList.add("obstacles")
+  obj.style.height = height +"px"
+  obj.style.width = width +"px"
+
   obj.style.right = "0px"
   obj.style.bottom = "0px"
 
