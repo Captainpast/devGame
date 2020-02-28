@@ -4,7 +4,7 @@ var game = {}
 
 game.start = function() {
   player.create()
-  obstacle.create(70, 40)
+  obstacle.spawning(levels)
   game.loop()
 }
 
@@ -37,3 +37,24 @@ obstacle.create = function(height, width) {
 
   return obstacle.s.length -1;
 }
+obstacle.spawning = function(level) {
+  console.log(level);
+  for (var i = 0; i < level.length; i++) {
+    setTimeout(function (level) {
+      obstacle.create(level.height, level.width)
+    }, level[i].time, level[i]);
+  }
+}
+
+var levels = [
+  {
+    "height": 70,
+    "width": 40,
+    "time": 0
+  },
+  {
+    "height": 50,
+    "width": 30,
+    "time": 2000
+  }
+]
