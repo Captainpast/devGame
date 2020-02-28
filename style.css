@@ -1,0 +1,33 @@
+/* CSS documnet*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#area {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  height: 400px;
+  width: 700px;
+  border: solid 1px #000000;
+  background: #1cdfff;
+}
+
+.player {
+  height: 30px;
+  width: 30px;
+  background: green;
+  position: absolute;
+  bottom: 0px;
+  left: 80px;
+}
+
+.obstacles {
+  height: 70px;
+  width: 40px;
+  background: red;
+  position: absolute;
+}
